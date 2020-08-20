@@ -4,6 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pmudra</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&display=swap");
+      body {
+        background-color: #C6DABF;
+        font-family: "Overpass Mono", monospace;
+        font-weight: 700;
+        font-size: 20px;
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .shell {
+        background-color: white;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.22);
+        border-radius: 10px;
+        padding: 1em;
+        width: 30em;
+        max-width: 50%;
+        height: 10em;
+        max-height: 50vh;
+        user-select: none;
+        word-break: break-all;
+      }
+      @keyframes blink {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      .blink {
+        animation: 1s infinite steps(2, jump-none) blink;
+      }
+    </style>
   </head>
-  <body>Hello, Web!</body>
+  <body>
+    <div class="shell">
+      <span>$ pmudra.dev<span class="blink">█</span></span>
+    </div>
+  </body>
 </html>
